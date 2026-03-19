@@ -1,7 +1,9 @@
 import { useMemo, memo } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const EventsSection = () => {
+  const navigate=useNavigate();
   const events = useMemo(
     () => [
       {
@@ -11,6 +13,7 @@ const EventsSection = () => {
         desc: "Join our intensive cricket training camp with expert coaches.",
         image:
           "/Hero/3.jpg",
+          path: "/cricket",
       },
       {
         id: 2,
@@ -19,6 +22,7 @@ const EventsSection = () => {
         desc: "Show your skills and get selected for our football team.",
         image:
           "/Hero/2.jpg",
+          path: "/football",
       },
       {
         id: 3,
@@ -27,6 +31,7 @@ const EventsSection = () => {
         desc: "Compete in running, jumping and field events.",
         image:
           "/Hero/4.jpg",
+          path: "/athletics",
       },
     ],
     []
@@ -81,7 +86,8 @@ const EventsSection = () => {
                 {event.desc}
               </p>
 
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition transform">
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition transform"
+              onClick={() => navigate(event.path)}>
                 Learn More →
               </button>
             </div>
