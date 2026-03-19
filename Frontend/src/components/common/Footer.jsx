@@ -71,14 +71,14 @@ const Footer = () => {
           <div className="flex items-start gap-2 text-sm mb-3 text-gray-300">
             <MapPin size={16} className="mt-1 text-indigo-300" />
             <span>
-              Vill + P.O. - Ghoni, Majher Para, <br />
-              P.S. - New Town, Kolkata - 700157
+              Vill + P.O. - Para, new Para, <br />
+              P.S. - New Town, Kolkata - 700156
             </span>
           </div>
 
           <div className="flex items-center gap-2 text-sm mb-3 text-gray-300">
             <Phone size={16} className="text-indigo-300" />
-            <span>+91 9876543210</span>
+            <span>+91 9876543278</span>
           </div>
 
           <div className="flex items-center gap-2 text-sm text-gray-300">
