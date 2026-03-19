@@ -102,9 +102,9 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="relative text-center text-sm text-gray-400 mt-12 border-t border-white/10 pt-5">
+      <div className="relative text-center text-sm text-gray-200 mt-12 border-t border-white/10 pt-5">
         © {new Date().getFullYear()} 
-        <span className="text-white font-medium"> Aparna Sports Academy</span>. All rights reserved.
+        <span className="text-white font-medium"> Aparna Sports Academy</span>. Design and developed by Digital Exposure Online Services
       </div>
 
     </footer>
