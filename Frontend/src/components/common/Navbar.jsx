@@ -28,7 +28,15 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full sticky top-0 z-50 backdrop-blur-md bg-gradient-to-r from-blue-900 via-indigo-700 to-purple-700 shadow-lg">
+    <motion.header
+  className="w-full sticky top-0 z-50 backdrop-blur-md bg-gradient-to-r from-blue-900 via-indigo-700 to-purple-700 shadow-lg"
+  animate={{ y: [0, -3, 0] }}
+  transition={{
+    duration: 3,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
 
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 
@@ -145,7 +153,7 @@ const Navbar = () => {
                     </>
                 )}
             </AnimatePresence>
-    </header>
+    </motion.header>
   );
 };
 
