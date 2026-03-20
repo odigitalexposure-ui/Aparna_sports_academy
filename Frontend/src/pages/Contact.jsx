@@ -19,7 +19,7 @@ const Contact = () => {
   const handleSubmit = useCallback((e) => {
   e.preventDefault();
 
-  const phone = "919876543274"; // your WhatsApp number with country code
+  const phone = "918013029238"; // your WhatsApp number with country code
 
   const text = `Hello, my name is ${form.name}.
 Email: ${form.email}
@@ -121,7 +121,7 @@ Message: ${form.message}`;
 
               <div className="flex items-center gap-4 text-gray-800">
                 <Phone className="text-primary" size={20} />
-                <p className="text-sm">+91 9876543248</p>
+                <p className="text-sm">+91 8013029238</p>
               </div>
 
               <div className="flex items-center gap-4 text-gray-800">
