@@ -7,11 +7,13 @@ import Testimonials from "../components/home/Testimonials";
 const Home = () => {
   return (
     <>
+    <div className="overflow-hidden overflow-hidden pt-20">
       <Hero />
       <SportsOverview/>
       <AboutSection/>
       <EventsSection/>
       <Testimonials/>
+      </div>
     </>
   );
 };

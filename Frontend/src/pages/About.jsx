@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden pt-20">
 
       {/* 🔥 HERO */}
       <section className="py-20 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 text-white text-center">

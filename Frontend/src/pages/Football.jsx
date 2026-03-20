@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Football = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden pt-20">
 
       {/* 🔥 HERO SECTION */}
       <section className="relative h-[70vh] flex items-center justify-center">

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 // /Hero/1.jpg
 // https://images.unsplash.com/photo-1593766827228-8737b4534aa6?q=80&w=1600&auto=format&fit=crop
 // https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1600&auto=format&fit=crop
@@ -86,7 +87,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl mb-6 drop-shadow-lg">
               {slides[index].subtitle}
             </p>
-
+            <Link to="/contact">
             <button className="
               relative overflow-hidden px-8 py-3 rounded-full font-semibold
               bg-gradient-to-r from-[#1e3a8a] via-[#4f46e5] to-[#db2777]
@@ -95,7 +96,7 @@ const Hero = () => {
               text-white
             ">
               Join Now
-            </button>
+            </button></Link>
           </motion.div>
         </AnimatePresence>
 

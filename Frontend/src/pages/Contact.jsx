@@ -31,7 +31,7 @@ Message: ${form.message}`;
 }, [form]);
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden pt-20">
 
       {/* 🔥 HERO */}
       <section className="py-16 bg-gradient-to-r from-[#1e3a8a] via-[#4f46e5] to-[#db2777] text-white text-center">

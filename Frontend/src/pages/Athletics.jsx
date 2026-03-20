@@ -1,9 +1,10 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Athletics = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden pt-20">
 
       {/* 🔥 HERO SECTION */}
       <section className="relative h-[70vh] flex items-center justify-center">
@@ -30,9 +31,11 @@ const Athletics = () => {
           <p className="text-lg md:text-2xl drop-shadow-md">
             Speed, strength, and endurance for champions
           </p>
+          <Link to="/contact">
           <button className="mt-6 bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-400 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transform transition">
             Join Now
           </button>
+           </Link>
         </motion.div>
       </section>
 
