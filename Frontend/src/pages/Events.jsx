@@ -7,17 +7,17 @@ const Events = () => {
     {
       title: "District Cricket Tournament",
       date: "April 2026",
-      img: "https://images.unsplash.com/photo-1593766788306-28561086694e?q=80&w=1600&auto=format&fit=crop",
+      img: "/Hero/3.jpg",
     },
     {
       title: "Football Championship",
       date: "May 2026",
-      img: "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1600&auto=format&fit=crop",
+      img: "/Hero/1.jpg",
     },
     {
       title: "Athletics Meet",
       date: "June 2026",
-      img: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=1600&auto=format&fit=crop",
+      img: "/Hero/4.jpg",
     },
   ], []);
 
@@ -25,12 +25,12 @@ const Events = () => {
     {
       title: "Winter Cricket Camp",
       date: "Dec 2025",
-      img: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=1600&auto=format&fit=crop",
+      img: "/Hero/3.jpg",
     },
     {
       title: "School Football League",
       date: "Nov 2025",
-      img: "https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?q=80&w=1600&auto=format&fit=crop",
+      img: "/Hero/1.jpg",
     },
   ], []);
 

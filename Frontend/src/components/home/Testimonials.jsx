@@ -10,7 +10,7 @@ const Testimonials = () => {
         role: "Cricket Student",
         review:
           "The coaching here is amazing. My skills improved a lot and I gained confidence in matches.",
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
+        image: "/testimonial.png",
       },
       {
         id: 2,
@@ -18,7 +18,7 @@ const Testimonials = () => {
         role: "Football Player",
         review:
           "Professional training and friendly environment. Highly recommended for football lovers.",
-        image: "https://randomuser.me/api/portraits/men/45.jpg",
+        image: "/testimonial.png",
       },
       {
         id: 3,
@@ -26,7 +26,7 @@ const Testimonials = () => {
         role: "Athletics Student",
         review:
           "Best place for athletics training. Coaches are very supportive and motivating.",
-        image: "https://randomuser.me/api/portraits/women/44.jpg",
+        image: "/testimonial.png",
       },
     ],
     []

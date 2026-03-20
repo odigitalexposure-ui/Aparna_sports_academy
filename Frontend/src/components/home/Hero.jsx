@@ -31,7 +31,7 @@ const slides = [
   id: 4,
   title: "Chase Every Goal",
   subtitle: "Elite Football Training for Champions",
-  image: "/Hero/2.jpg",
+  image: "/Hero/5.jpg",
 }
   
 ];

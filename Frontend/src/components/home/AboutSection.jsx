@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
-
+// https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop
 const AboutSection = () => {
   return (
     <section className="py-20 bg-gradient-to-r from-purple-50 via-pink-50 to-yellow-50">
@@ -16,7 +16,7 @@ const AboutSection = () => {
           className="relative group"
         >
           <img
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop"
+            src="/aboutsection.jpeg"
             alt="academy"
             className="rounded-2xl shadow-2xl w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
           />

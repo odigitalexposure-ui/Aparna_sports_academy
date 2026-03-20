@@ -132,17 +132,17 @@ const About = () => {
               {
                 name: "Coach Raj",
                 role: "Cricket Coach",
-                img: "https://randomuser.me/api/portraits/men/11.jpg",
+                img: "/testimonial.png",
               },
               {
                 name: "Coach Arjun",
                 role: "Football Coach",
-                img: "https://randomuser.me/api/portraits/men/22.jpg",
+                img: "/testimonial.png",
               },
               {
                 name: "Coach Neha",
                 role: "Athletics Coach",
-                img: "https://randomuser.me/api/portraits/women/33.jpg",
+                img: "/testimonial.png",
               },
             ].map((coach, index) => (
               <motion.div
