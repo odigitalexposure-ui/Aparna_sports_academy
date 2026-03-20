@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Cricket = () => {
   return (
@@ -28,9 +29,11 @@ const Cricket = () => {
           <p className="text-lg md:text-2xl drop-shadow-md">
             Train with professionals and elevate your game
           </p>
+          <Link to="/contact">
           <button className="mt-6 bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-400 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transform transition">
             Join Now
           </button>
+          </Link>
         </motion.div>
       </section>
 
