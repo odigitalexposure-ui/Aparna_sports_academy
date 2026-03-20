@@ -29,12 +29,12 @@ const Navbar = () => {
   ];
 
   // 🔥 Lock body scroll when sidebar is open
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+  // useEffect(() => {
+  //   document.body.style.overflow = isOpen ? "hidden" : "auto";
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [isOpen]);
 
   return (
     <>
@@ -59,7 +59,7 @@ const Navbar = () => {
               />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-lg md:text-xl lg:text-2xl font-bold text-white tracking-wide">
+              <span className="text-lg md:text-xl lg:text-md font-bold text-white tracking-wide">
                 Aparna Sports Academy
               </span>
             </div>
@@ -98,7 +98,7 @@ const Navbar = () => {
           <>
             {/* Overlay */}
             <motion.div
-              className="fixed inset-0 bg-white/80 backdrop-blur-lg z-40"
+              className="fixed inset-0  z-40"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -107,7 +107,7 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <motion.div
-              className="fixed top-0 right-0 w-72 h-[100dvh] z-[999] shadow-2xl p-0 flex flex-col 
+              className="fixed top-0 right-0 w-72 h-[60vh] z-[999] shadow-2xl p-0 flex flex-col 
               bg-gradient-to-br from-[#0f172a] via-[#6366f1] to-[#ec4899]"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -124,7 +124,7 @@ const Navbar = () => {
 
               {/* Links */}
               <div className="pt-4 bg-gradient-to-br from-[#1e3a8a] via-[#4f46e5] to-[#db2777]">
-                <div className="flex flex-col gap-6 px-6">
+                <div className="flex flex-col gap-2 px-6">
                   {navLinks.map((link) => (
                     <NavLink
                       key={link.name}
