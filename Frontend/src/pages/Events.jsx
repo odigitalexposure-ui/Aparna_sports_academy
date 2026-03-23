@@ -25,7 +25,7 @@ const Events = () => {
     {
       title: "Winter Cricket Camp",
       date: "Dec 2025",
-      img: "/Hero/3.jpg",
+      img: "/gallery/g3.jpeg",
     },
     {
       title: "School Football League",

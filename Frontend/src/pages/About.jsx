@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 const About = () => {
   return (
@@ -18,7 +19,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
 
           <motion.img
-            src="/Hero/4.jpg"
+            src="/About/about.jpeg"
             alt="academy"
             className="rounded-3xl shadow-2xl w-full h-[380px] object-cover"
             initial={{ opacity: 0, x: -60 }}
@@ -109,7 +110,13 @@ const About = () => {
               viewport={{ once: true }}
             >
               <h3 className={`text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r ${item.color}`}>
-                {item.value}
+                <CountUp
+                  end={parseInt(item.value)}
+                  duration={2}
+                  enableScrollSpy
+                  scrollSpyOnce
+                />
+                +
               </h3>
               <p className="text-gray-700 font-medium">{item.label}</p>
             </motion.div>

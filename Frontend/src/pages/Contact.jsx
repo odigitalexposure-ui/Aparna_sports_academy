@@ -17,18 +17,18 @@ const Contact = () => {
   }, []);
 
   const handleSubmit = useCallback((e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const phone = "918013029238"; // your WhatsApp number with country code
+    const phone = "91 7980327267"; // your WhatsApp number with country code
 
-  const text = `Hello, my name is ${form.name}.
+    const text = `Hello, my name is ${form.name}.
 Email: ${form.email}
 Message: ${form.message}`;
 
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
-  window.open(url, "_blank");
-}, [form]);
+    window.open(url, "_blank");
+  }, [form]);
 
   return (
     <div className="w-full overflow-hidden pt-20">
@@ -87,7 +87,7 @@ Message: ${form.message}`;
             />
 
             <button
-  className="
+              className="
     relative overflow-hidden
     px-8 py-3 rounded-xl
     font-semibold text-white
@@ -97,9 +97,9 @@ Message: ${form.message}`;
     transform hover:scale-105
     transition-all duration-300 ease-in-out
   "
->
-  Send Message
-</button>
+            >
+              Send Message
+            </button>
           </motion.form>
 
           {/* 📍 INFO + MAP */}
@@ -114,27 +114,30 @@ Message: ${form.message}`;
               <div className="flex items-center gap-4 text-gray-800">
                 <MapPin className="text-primary" size={20} />
                 <p className="text-sm">
-                  Vill + P.O. - Village, Para, <br />
-                  P.S. - New Town, Kolkata - 700146
+                  Agarpara Kalyan Samity Ground, <br />
+                  Near Agarpara Railway Station, 5 No. Rail Gate
                 </p>
               </div>
 
               <div className="flex items-center gap-4 text-gray-800">
                 <Phone className="text-primary" size={20} />
-                <p className="text-sm">+91 8013029238</p>
+                <p className="text-sm">
+                  +91 7980327267, <br />
+                  +91 8012029238
+                </p>
               </div>
 
-              <div className="flex items-center gap-4 text-gray-800">
+              {/* <div className="flex items-center gap-4 text-gray-800">
                 <Mail className="text-primary" size={20} />
                 <p className="text-sm">info@aparnasports.com</p>
-              </div>
+              </div> */}
             </div>
 
             {/* Map */}
             <div className="w-full h-[300px] rounded-2xl overflow-hidden shadow-2xl mt-6 border border-gray-200">
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps?q=New%20Town%20Kolkata&output=embed"
+                src="https://www.google.com/maps?q=Agarpara%20Kalyan%20Samity%20Ground%20Near%20Agarpara%20Railway%20Station&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
               />

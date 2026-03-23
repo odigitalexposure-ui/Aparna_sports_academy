@@ -64,7 +64,7 @@ const SportsOverview = () => {
               src={sport.image}
               alt={sport.name}
               loading="lazy"
-              className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
             />
 
             {/* Animated Overlay */}

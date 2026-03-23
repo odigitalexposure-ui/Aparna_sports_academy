@@ -12,6 +12,7 @@ const Events = lazy(() => import("../pages/Events"));
 const Cricket = lazy(() => import("../pages/Cricket"));
 const Football = lazy(() => import("../pages/Football"));
 const Athletics = lazy(() => import("../pages/Athletics"));
+const Gallery=lazy(()=>import("../pages/Gallery"))
 
 const Loader = () => {
   return (
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
       { path: "cricket", element: <Suspense fallback={<Loader />}><Cricket /></Suspense> },
       { path: "football", element: <Suspense fallback={<Loader />}><Football /></Suspense> },
       { path: "athletics", element: <Suspense fallback={<Loader />}><Athletics /></Suspense> },
+      { path: "gallery", element: <Suspense fallback={<Loader />}><Gallery /></Suspense> },
     ],
   },
 ]);

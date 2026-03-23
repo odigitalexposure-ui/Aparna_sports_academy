@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -71,31 +71,62 @@ const Footer = () => {
           <div className="flex items-start gap-2 text-sm mb-3 text-gray-300">
             <MapPin size={16} className="mt-1 text-indigo-300" />
             <span>
-              Vill + P.O. - Para, new Para, <br />
-              P.S. - New Town, Kolkata - 700156
+              Agarpara Kalyan Samity Ground, <br />
+              Near Agarpara Railway Station, 5 No. Rail Gate
             </span>
           </div>
 
           <div className="flex items-center gap-2 text-sm mb-3 text-gray-300">
             <Phone size={16} className="text-indigo-300" />
-            <span>+91 8013029238</span>
+            <span className="flex gap-2">
+              <a href="tel:+917980327267" className="hover:underline">
+                +91 7980327267
+              </a>
+              ,
+              <a href="tel:+918012029238" className="hover:underline">
+                +91 8012029238
+              </a>
+            </span>
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-gray-300">
+          {/* <div className="flex items-center gap-2 text-sm text-gray-300">
             <Mail size={16} className="text-indigo-300" />
             <span>info@aparnasports.com</span>
-          </div>
+          </div> */}
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-5">
-            {[Facebook, Instagram].map((Icon, i) => (
-              <div
-                key={i}
-                className="p-2 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition duration-300 cursor-pointer"
-              >
-                <Icon size={18} className="text-white" />
-              </div>
-            ))}
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/p/ACA-cricket-100083370240981/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-[#1877F2] hover:scale-110 transition duration-300"
+            >
+              <Facebook size={18} className="text-white" />
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/aparnacricket?igsh=MWJlaWozYmo0dGhqYw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:scale-110 transition duration-300"
+            >
+              <Instagram size={18} className="text-white" />
+            </a>
+
+            {/* YouTube */}
+            <a
+              href="https://www.youtube.com/@aparnacricketacademy3694"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-[#FF0000] hover:scale-110 transition duration-300"
+            >
+              <Youtube size={18} className="text-white" />
+            </a>
+
           </div>
         </div>
 
@@ -103,7 +134,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="relative text-center text-sm text-gray-200 mt-12 border-t border-white/10 pt-5">
-        © {new Date().getFullYear()} 
+        © {new Date().getFullYear()}
         <span className="text-white font-medium"> Aparna Sports Academy</span>. Design and developed by Digital Exposure Online Services
       </div>
 
