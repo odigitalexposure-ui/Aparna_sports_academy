@@ -132,7 +132,7 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <motion.div
-              className="fixed top-0 right-0 w-72 h-[80vh] z-[999] shadow-2xl flex flex-col 
+              className="fixed top-0 right-0 w-72 h-auto z-[999] shadow-2xl flex flex-col 
               bg-gradient-to-br from-[#0f172a] via-[#6366f1] to-[#ec4899]"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
