@@ -123,7 +123,7 @@ Message: ${form.message}`;
                 <Phone className="text-primary" size={20} />
                 <p className="text-sm">
                   +91 7980327267, <br />
-                  +91 8012029238
+                  +91 8013029238
                 </p>
               </div>
 
