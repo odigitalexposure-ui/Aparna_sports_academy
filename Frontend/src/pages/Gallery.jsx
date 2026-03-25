@@ -2,16 +2,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const images = [
-    { id: 1, src: "/gallery/g1.jpeg", title: "" },
-    { id: 2, src: "/gallery/g2.jpeg", title: "" },
-    { id: 3, src: "/gallery/g3.jpeg", title: "" },
-    { id: 4, src: "/gallery/g4.jpeg", title: "" },
-    { id: 5, src: "/gallery/g5.jpeg", title: "" },
-    { id: 6, src: "/gallery/g6.jpeg", title: "" },
-    { id: 7, src: "/gallery/g7.jpeg", title: "" },
-    { id: 8, src: "/gallery/g8.jpeg", title: "" },
-    { id: 9, src: "/gallery/g9.jpeg", title: "" },
-    { id: 10, src: "/gallery/g10.jpeg", title: "" }
+    { id: 1, src: "/gallery/g11.jpeg", title: "U15 challenge cup team 2026" },
+    { id: 2, src: "/gallery/g1.jpeg", title: "" },
+    { id: 3, src: "/gallery/g2.jpeg", title: "" },
+    { id: 4, src: "/gallery/g3.jpeg", title: "" },
+    { id: 5, src: "/gallery/g4.jpeg", title: "" },
+    { id: 6, src: "/gallery/g5.jpeg", title: "" },
+    { id: 7, src: "/gallery/g6.jpeg", title: "" },
+    { id: 8, src: "/gallery/g7.jpeg", title: "" },
+    { id: 9, src: "/gallery/g8.jpeg", title: "" },
+    { id: 10, src: "/gallery/g9.jpeg", title: "" },
+    { id: 11, src: "/gallery/g10.jpeg", title: "" }
 ];
 
 const containerVariants = {
@@ -77,11 +78,11 @@ const Gallery = () => {
                             className="w-full h-[250px] object-cover transform group-hover:scale-110 transition duration-500"
                         />
 
-                        {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
               <h3 className="text-white text-lg font-semibold tracking-wide">
                 {img.title}
               </h3>
-            </div> */}
+            </div>
                     </motion.div>
                 ))}
             </motion.div>
@@ -121,9 +122,9 @@ const Gallery = () => {
                             />
 
                             {/* Title */}
-                            {/* <p className="text-center text-white mt-4 text-lg">
+                            <p className="text-center text-white mt-4 text-sm sm:text-lg">
                 {selectedImage.title}
-              </p> */}
+              </p>
                         </motion.div>
                     </motion.div>
                 )}
