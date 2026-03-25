@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const previewImages = [
-  "/gallery/g1.jpeg",
-  "/gallery/g2.jpeg",
-  "/gallery/g3.jpeg",
-  "/gallery/g4.jpeg",
+  { src: "/gallery/g11.jpeg", desc: "U15 challenge cup team 2026" },
+  { src: "/gallery/g2.jpeg", desc: "Warm-up & Flexibility Routine" },
+  { src: "/gallery/g3.jpeg", desc: "On-field Training" },
+  { src: "/gallery/g4.jpeg", desc: "Learning & Practicing Together" },
 ];
 
 const MomentsSection = () => {
@@ -26,7 +26,7 @@ const MomentsSection = () => {
 
           <p className="text-gray-400 mt-6 text-lg">
             From intense training sessions to victorious moments on the field,
-explore the journey that builds champions and creates unforgettable memories.
+            explore the journey that builds champions and creates unforgettable memories.
           </p>
 
           <Link to="/gallery">
@@ -49,13 +49,18 @@ explore the journey that builds champions and creates unforgettable memories.
               className="relative overflow-hidden rounded-2xl group"
             >
               <img
-                src={img}
+                src={img.src}
                 alt="moments"
                 className="w-full h-[140px] md:h-[180px] object-cover group-hover:scale-110 transition duration-500"
               />
 
               {/* Overlay Glow */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
+
+              {/* Always-visible description */}
+              <div className="absolute bottom-0 left-0 w-full px-2 py-1 bg-black/70 text-white text-sm md:text-base font-medium">
+                {img.desc}
+              </div>
             </div>
           ))}
         </motion.div>
