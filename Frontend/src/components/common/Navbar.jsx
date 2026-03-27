@@ -1,10 +1,30 @@
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback, memo, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone, Facebook, Instagram, Youtube } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [zoom, setZoom] = useState(false);
+  const logoRef = useRef(null);
+useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (logoRef.current && !logoRef.current.contains(event.target)) {
+        setZoom(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const handleLogoClick = (e) => {
+    e.preventDefault(); // prevent navigation when zooming
+    setZoom((prev) => !prev);
+  };
 
   const toggleMenu = useCallback(() => {
     setIsOpen((prev) => !prev);
@@ -36,23 +56,29 @@ const Navbar = () => {
         className="fixed top-0 w-full z-50 backdrop-blur-md bg-gradient-to-r from-blue-900 via-indigo-700 to-purple-700 shadow-lg"
         animate={{ y: [0, -3, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+
       >
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 
           {/* ✅ LEFT → LOGO */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="h-20 w-20">
+            <div
+              ref={logoRef}
+              onClick={handleLogoClick}
+              className={`h-20 w-20 transition-all duration-300 cursor-pointer hover:scale-150 ${zoom ? "scale-150" : ""
+                }`}
+            >
               <img
-                src="/logo.jpeg"
+                src="/logo1.jpeg"
                 alt="logo"
                 className="h-full w-full object-cover rounded-full border-2 border-white shadow-md"
               />
             </div>
+
             <span className="text-lg md:text-xl font-bold text-white whitespace-nowrap">
               Aparna Sports Academy
             </span>
           </Link>
-
           {/* ✅ CENTER → MENU (PERFECT BALANCE) */}
           <nav className="hidden md:flex flex-1 justify-center gap-8">
             {navLinks.map((link) => (
@@ -60,16 +86,14 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative text-sm font-medium transition-colors duration-300 ${
-                    isActive ? "text-yellow-400" : "text-white"
+                  `relative text-sm font-medium transition-colors duration-300 ${isActive ? "text-yellow-400" : "text-white"
                   } after:content-[''] after:absolute after:left-0 after:bottom-0
                    after:h-[2px] after:w-full after:bg-amber-300
                    after:origin-left after:scale-x-0 after:transition-transform after:duration-300
-                   ${
-                     isActive
-                       ? "after:scale-x-100"
-                       : "hover:after:scale-x-100"
-                   }`
+                   ${isActive
+                    ? "after:scale-x-100"
+                    : "hover:after:scale-x-100"
+                  }`
                 }
               >
                 {link.name}
